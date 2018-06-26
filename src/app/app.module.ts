@@ -10,6 +10,7 @@ import { DefaultComponent } from './components/default.component';
 import { LoginComponent } from './components/login.component';
 import { RegisterComponent } from './components/register.component';
 import { UserEditComponent } from './components/user_edit.component';
+import { TaskNewComponent } from './components/task_new.component';
 
 import { HttpModule } from '@angular/http';
 
@@ -19,7 +20,8 @@ import { HttpModule } from '@angular/http';
   DefaultComponent,
   LoginComponent,
   RegisterComponent,
-  UserEditComponent
+  UserEditComponent,
+  TaskNewComponent
   ],
   imports: [
   BrowserModule,
