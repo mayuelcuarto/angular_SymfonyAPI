@@ -9,7 +9,7 @@
 		¡Tus datos no se han actualizado!
 	</div>
 
-	<form #updateForm="ngForm" (ngSubmit)="onSubmit()" class="col-md-7">
+	<form #updateForm="ngForm" (ngSubmit)="onSubmit()" class="col-md-7" style="padding-left: 0px;">
 		<p>
 			<label>Nombre</label>
 			<input type="text" class="form-control" name="name" #name="ngModel" [(ngModel)]="user.name" required />
