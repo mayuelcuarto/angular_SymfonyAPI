@@ -53,7 +53,7 @@ export class TaskNewComponent implements OnInit {
 				}
 			},
 			error => {
-				console.log(<any>error)
+				console.log(<any>error);
 			}
 			);
 	}

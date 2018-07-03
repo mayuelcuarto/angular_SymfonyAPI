@@ -31,7 +31,7 @@
 					</td>
 					<td>
 						<h4>
-							{{task.title}}
+							<a [routerLink]="['/task', task.id]" >{{task.title}}</a>
 						</h4>
 					</td>
 					<td>

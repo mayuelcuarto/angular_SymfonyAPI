@@ -6,6 +6,7 @@ import { LoginComponent } from './components/login.component';
 import { RegisterComponent } from './components/register.component';
 import { UserEditComponent } from './components/user_edit.component';
 import { TaskNewComponent } from './components/task_new.component';
+import { TaskDetailComponent } from './components/task_detail.component';
 
 const appRoutes: Routes = [
 	{path:'', component:DefaultComponent},
@@ -16,6 +17,7 @@ const appRoutes: Routes = [
 	{path:'register', component:RegisterComponent},
 	{path:'user-edit', component:UserEditComponent},
 	{path:'task-new', component:TaskNewComponent},
+	{path:'task/:id', component:TaskDetailComponent},
 	{path:'**', component:LoginComponent}
 ];
 
