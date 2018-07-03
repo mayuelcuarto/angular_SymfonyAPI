@@ -38,21 +38,28 @@ export class UserEditComponent implements OnInit {
 				this.identity.password
 				);
 		}
+		//console.log("OnInit");
+		//console.log(this.identity);
 	}
 
 	onSubmit(){
-		console.log(this.user);
 		this._userService.update_user(this.user).subscribe(
 			response => {
 				this.status = response.status;
-				if(response.status != 'Success'){
+				if(this.status != 'Success'){
 					this.status = 'Error';
 				}else{
-					localStorage.setItem('identity', JSON.stringify(this.user));
+					this.identity.sub = response.user.id;
+					this.identity.name = response.user.name;
+					this.identity.surname = response.user.surname;
+					this.identity.email = response.user.email;
+					//console.log("OnSubmit");
+					//console.log(this.identity);
+					localStorage.setItem('identity', JSON.stringify(this.identity));
 				}
 			},
 			error => {
-				console.log(<any>error)
+				console.log(<any>error);
 			}
 			);
 	}
