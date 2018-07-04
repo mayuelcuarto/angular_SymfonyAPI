@@ -12,6 +12,7 @@ import { RegisterComponent } from './components/register.component';
 import { UserEditComponent } from './components/user_edit.component';
 import { TaskNewComponent } from './components/task_new.component';
 import { TaskDetailComponent } from './components/task_detail.component';
+import { TaskEditComponent } from './components/task_edit.component';
 
 import { HttpModule } from '@angular/http';
 
@@ -23,7 +24,8 @@ import { HttpModule } from '@angular/http';
   RegisterComponent,
   UserEditComponent,
   TaskNewComponent,
-  TaskDetailComponent
+  TaskDetailComponent,
+  TaskEditComponent
   ],
   imports: [
   BrowserModule,
