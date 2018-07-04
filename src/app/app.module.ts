@@ -13,6 +13,7 @@ import { UserEditComponent } from './components/user_edit.component';
 import { TaskNewComponent } from './components/task_new.component';
 import { TaskDetailComponent } from './components/task_detail.component';
 import { TaskEditComponent } from './components/task_edit.component';
+import { GenerateDatePipe } from './pipes/generate_date.pipe';
 
 import { HttpModule } from '@angular/http';
 
@@ -25,7 +26,8 @@ import { HttpModule } from '@angular/http';
   UserEditComponent,
   TaskNewComponent,
   TaskDetailComponent,
-  TaskEditComponent
+  TaskEditComponent,
+  GenerateDatePipe
   ],
   imports: [
   BrowserModule,

@@ -60,7 +60,21 @@ export class TaskDetailComponent implements OnInit {
 				error => {
 					console.log(<any>error);
 				}
-			);
+				);
 		});
+	}
+
+	deleteTask(id){
+		this._taskService.deleteTask(this.token, id).subscribe(
+			response => {
+				if(response.status == 'Success'){
+						this._router.navigate(['/']);
+					}else{
+						alert("No se ha borrado la tarea");
+					}
+				},
+				error => {
+					console.log(<any>error);
+				});
 	}
 }
