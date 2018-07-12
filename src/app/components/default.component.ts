@@ -14,6 +14,7 @@ export class DefaultComponent implements OnInit{
 	private identity;
 	private token;
 	private tasks: Array<Task>;
+	public total_items;
 	public pages;
 	public pagePrev;
 	public pageNext;
@@ -47,6 +48,7 @@ export class DefaultComponent implements OnInit{
 				response => {
 					if(response.status == 'Success'){
 						this.tasks = response.data;
+						this.total_items = response.total_items_count;
 						this.loading = 'hide';
 
 						// Total de páginas

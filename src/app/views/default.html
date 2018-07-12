@@ -35,7 +35,7 @@
 			<div class="loader" *ngIf="loading == 'show'">
 				<img src="./assets/image/loader.gif"/>
 			</div>
-			<table class="table table-hover table-stripped" id="tasks-list" *ngIf="tasks && tasks.length>=1">
+			<table class="table table-hover table-stripped" id="tasks-list" *ngIf="!tasks || total_items >= 1">
 				<tr>
 					<th>Estado</th>
 					<th>Título</th>
@@ -66,11 +66,11 @@
 				</tr>
 			</table>
 
-			<span class="alert alert-warning col-md-12" *ngIf="loading == 'hide' && !tasks || tasks.length == 0">
+			<span class="alert alert-warning col-md-12" *ngIf="!tasks || total_items == 0">
 				No se han encontrado tareas, crealas <a [routerLink] ="['/task-new']">pinchando aquí</a>.
 			</span>
 
-			<ul class="pagination" *ngIf="tasks && tasks.length>=1 && !searchString && !filter && !order">
+			<ul class="pagination" *ngIf="tasks && total_items>=1 && !searchString && !filter && !order">
 				<li>
 					<a [routerLink]="['/index', pagePrev]" aria-label="Previous">
 						<span aria-hidden="true">&laquo;</span>

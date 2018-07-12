@@ -1,3 +1,3 @@
 export var GLOBAL = {
-	url: 'http://apisymfony4.com.devel'
+	url: 'http://localhost/api_symfony4/public'
 };

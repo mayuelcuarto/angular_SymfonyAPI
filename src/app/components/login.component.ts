@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit{
 				this.identity = null;
 				this.token = null;
 
-				window.location.href = '/login';
+				window.location.href = './';
 			}
 		});
 	}
@@ -78,14 +78,13 @@ export class LoginComponent implements OnInit{
 								}else{
 									if(!this.token.status){
 										localStorage.setItem('token', JSON.stringify(this.token));
-										window.location.href = '/';
+										window.location.href = './';
 									}
 								}
 							},
 							error => {
 								console.log(<any>error);
-							}
-							);
+							});
 					}
 				}
 			},
