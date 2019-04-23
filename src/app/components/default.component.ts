@@ -11,7 +11,7 @@ import { Task } from '../models/task';
 })
 export class DefaultComponent implements OnInit{
 	public title: string ;
-	private identity;
+	public identity;
 	private token;
 	private tasks: Array<Task>;
 	public total_items;
